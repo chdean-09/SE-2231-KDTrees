@@ -14,4 +14,20 @@ export default class TreeNode {
     this.rightChild = null;
     this.isHorizontalSplit = isHorizontalSplit;
   }
+
+  compare(p : Point2D) : boolean {
+    if (this.isHorizontalSplit) {
+      if (p.x > this.point2D.x) {
+        return true
+      } else {
+        return false
+      }
+    } else {
+      if (p.y > this.point2D.y) {
+        return true
+      } else {
+        return false
+      }
+    }
+  }
 }
