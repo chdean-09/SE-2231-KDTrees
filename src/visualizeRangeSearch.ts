@@ -8,7 +8,7 @@ import KDTree from "./kdTree";
 // i'll hardcode those myself
 
 const brute = new PointSET();
-// const kdTree = new KDTree();
+const kdTree = new KDTree();
 
 const points = [
   new Point2D(0.372, 0.497),
@@ -25,7 +25,7 @@ const points = [
 
 for (let point of points) {
   brute.insert(point);
-  // kdTree.insert(point);
+  kdTree.insert(point);
 }
 
 let x0 = 0.0,
@@ -100,11 +100,11 @@ let sketch = function (p) {
     }
 
     // draw the range search results for kd-tree in green
-    // p.strokeWeight(8 / height);
-    // p.stroke("green");
-    // for (let point of kdTree.range(rect)) {
-    //     point.draw(p);
-    // }
+    p.strokeWeight(8 / height);
+    p.stroke("green");
+    for (let point of kdTree.range(rect)) {
+        point.draw(p);
+    }
 
     // StdDraw.pause(20);
   };
