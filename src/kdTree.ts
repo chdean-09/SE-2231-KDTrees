@@ -1,25 +1,28 @@
 import Point2D from "./doNotTouch/point2D";
 import RectHV from "./doNotTouch/rectHV";
+import TreeNode from "./utils/treeNode";
+import treeSize from "./utils/treeSize";
 
 class KDTree {
-    // you might or might not need to put some parameters for the constructor
-    public constructor() {
-    }
+  root: TreeNode | null;
 
-    public isEmpty(): boolean {
-    }
+  public constructor() {
+    this.root = null;
+  }
 
-    public size(): number {
-    }
+  public isEmpty(): boolean {
+    return this.root === null;
+  }
 
-    public insert(p: Point2D): void {
-    }
+  public size(): number {
+    return treeSize(this.root)
+  }
 
-    public contains(p: Point2D): boolean {
-    }
+  public insert(p: Point2D): void {}
 
-    public range(rect: RectHV): Point2D[] {
-    }
+  public contains(p: Point2D): boolean {}
+
+  public range(rect: RectHV): Point2D[] {}
 }
 
 export default KDTree;
