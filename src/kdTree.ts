@@ -80,7 +80,6 @@ class KDTree {
 
   public range(rect: RectHV): Point2D[] {
     const points = getNodesRange(this.root, rect)
-    console.log(points)
     return points
   }
 }
