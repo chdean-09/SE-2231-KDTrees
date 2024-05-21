@@ -5,5 +5,5 @@ export default function treeSize(node: TreeNode | null): number {
     return 0;
   }
   
-  return 1 + this.sizeHelper(node.leftChild) + this.sizeHelper(node.rightChild);
+  return 1 + treeSize(node.leftChild) + treeSize(node.rightChild);
 }
